@@ -4,9 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+</head<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sliderContent {
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+}
+
+button {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #333;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #222;
+    color: white;
+    transform: scale(1.15);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 550px) {
+    .section {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .sliderContent {
+        width: 220px;
+        height: 180px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="section">
+        <button class="prev">⏮️</button>
+      <div class="sliderContent" style="width: 300px; height: 200px"></div>
+      <button class="next">⏭️</button>
+    </div>
+
+    <script>
+      let getElement = (selector) => document.querySelector(selector);
+
+      let prevBtn = getElement(".prev");
+      let nextBtn = getElement(".next");
+      let sliderContent = getElement(".sliderContent");
+
+      let colorArr = ["seashell", "seagreen", "coral", "skyblue", "silver"];
+
+      let currentIndex = 0;
+
+      function sliderFun() {
+        sliderContent.style.backgroundColor = colorArr[currentIndex];
+      }
+      sliderFun();
+
+      function nextFun() {
+        currentIndex++;
+        if (currentIndex == colorArr.length) {
+          currentIndex = 0;
+        }
+        sliderFun();
+      }
+
+      function prevFun() {
+        currentIndex--;
+        if (currentIndex == 0 - 1) {
+          currentIndex = colorArr.length - 1;
+        }
+        sliderFun();
+      }
+
+      nextBtn.addEventListener("click", nextFun);
+      prevBtn.addEventListener("click", prevFun);
+    </script>
+  </body>
+</html>
 <body>
     
-    
+
 </body>
 </html>
