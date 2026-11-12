@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>count value is :<span class="countValue">0</span></p>
+    <hr>
+    <button class="inc">➕</button>
+    <button class="rst">reset</button>
+    <button class="dec">➖</button>
+    <script>
+        let countvalue = document.querySelector('.countValue')
+        let incbtn = document.querySelector('.inc')
+        let decbtn = document.querySelector('.dec')
+        let reseet = document.querySelector('.rst')
+        let inc = ()=>(countvalue.innerHTML = +countvalue.innerHTML+1)
+        let dec = ()=>(countvalue.innerHTML = +countvalue.innerHTML-1)
+        let rstbtn = ()=>(countvalue.innerHTML = 0)
+        incbtn.addEventListener('click',inc)
+        decbtn.addEventListener('click',dec)
+        reseet.addEventListener('click',rstbtn)
+    </script>
+</body>
+</html>

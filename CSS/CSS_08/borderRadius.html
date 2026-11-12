@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        width: 400px;
+        height: 300px;
+        background-color: burlywood;
+        margin: 50px 30px;
+        border: 20px solid crimson;
+        /* -------------------------- */
+
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        border-radius: 20px 80px 40px 80px;
+        border-radius: 0px 80px 0px 80px;
+
+        /* border-radius: topleft/bottomright topright/bottomleft  */
+
+        border-radius: 0px 80px;
+        border-radius: 80px;
+
+        /* 
+            0 to 50%  = we can see the changes 
+            50 to 100% = no change 
+        */
+        border-radius: 50%;
+        border-radius: 100%;
+
+        /* width: 500px; */
+        height: 400px;
+
+        /* 
+                square    ===>> circle 
+                rectangle ===>> oval   */
+        border-radius: 0px 50%;
+        border-radius: 0px 100%;
+        border-radius: 50% 0%;
+        border-radius: 100% 0%;
+        border-radius: 50% 50% 0% 0%;
+        border-radius: 0% 0% 50% 50%;
+        border-radius: 50% 50% 0% 50%;
+        border-radius: 50% 0% 0% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+  </body>
+</html>

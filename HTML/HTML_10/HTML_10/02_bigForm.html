@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Big form</legend>
+
+      <form action="" novalidate re  >
+        <!-- username input field section start here  -->
+        <section>
+          <label for="username">username :</label>
+          <input type="text" name="username" id="username" required />
+        </section>
+        <br />
+        <!-- username input field section end here  -->
+
+        <!-- email input field section start here  -->
+        <section>
+          <label for="email">email :</label>
+          <input type="email" name="email" id="email" />
+        </section>
+        <br />
+        <!-- email input field section end here  -->
+
+        <!-- password input field section start here  -->
+        <section>
+          <label for="password">password :</label>
+          <input type="password" name="password" id="password" />
+        </section>
+        <br />
+        <!-- password input field section end here  -->
+
+        <!-- c_password input field section start here  -->
+        <section>
+          <label for="c_password">confirm password :</label>
+          <input type="password" name="c_password" id="c_password" />
+        </section>
+        <br />
+        <!-- c_password input field section end here  -->
+
+        <!-- Select your Gender -->
+        <p>Select Your Gender :</p>
+        <section>
+          <label for="male">Male</label>
+          <input type="radio" name="Gender" id="male" value="male"/>
+          <label for="female">Female</label>
+          <input type="radio" name="Gender" id="female" value="female" />
+          <label for="other">Other</label>
+          <input type="radio" name="Gender" id="other" value="other" />
+        </section>
+        <br />
+
+        <!-- Select your skills  -->
+        <p>Select Your skills :</p>
+        <section>
+          <label for="HTML">HTML</label>
+          <input type="checkbox" name="skill" id="HTML" value="HTML" checked />
+
+          <label for="CSS">CSS</label>
+          <input type="checkbox" name="skill" id="CSS" value="CSS" />
+
+          <label for="JS">JS</label>
+          <input type="checkbox" name="skill" id="JS" value="JS" />
+        </section>
+        <br />
+
+        <!-- ! select your course  -->
+        <p>Select Your Course</p>
+
+        <select name="courseName">
+          <option disabled selected>---- select your course ----</option>
+          <option>web tech</option>
+          <option>React</option>
+          <option>MERN</option>
+          <option value="Java Full stack with Gen AI">Java</option>
+          <option>Python</option>
+        </select>
+
+        <br />
+        <br />
+        <!-- !! feedback field !!  -->
+
+        <label for="feedback">feedback :</label>
+        <br />
+        <textarea
+          name="feedback"
+          id="feedback"
+          placeholder="enter the feedback of HTML Classes"
+          rows="10"
+          cols="60"
+        ></textarea>
+
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+        <button type="reset">reset</button>
+
+        <br />
+        <br />
+        <br />
+        <input type="text" disabled value="disabled" />
+        <br />
+        <br />
+        <input type="text" readonly value="readonly" />
+      </form>
+    </fieldset>
+  </body>
+</html>
